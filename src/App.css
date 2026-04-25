@@ -210,3 +210,21 @@
 .c-menu p {
     font-size: 14px
 }
+.splash{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#111,#1e3a8a,#2563eb);
+  color: white;
+}
+
+.splash h1{
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.splash p{
+  font-size: 20px;
+}

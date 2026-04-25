@@ -1,15 +1,33 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Informativa from "./informativa";
 import Original from "./original";
 import Usuario from "./usuario";
 import Home from "./home";
 import Favoritos from "./favoritos";
-import Equipo from "./equipo";
+import Cartas from "./cartas";
 
 import "./App.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="splash">
+        <h1>Yu-Gi-Oh App</h1>
+        <p>Cargando...</p>
+      </div>
+    );
+  }
+
   return (
     <Router>
       <nav className="c-menu">
@@ -26,7 +44,7 @@ function App() {
         <Route path="/original" element={<Original />} />
         <Route path="/informativa" element={<Informativa />} />
         <Route path="/usuario" element={<Usuario />} />
-        <Route path="/equipo/:equipo" element={<Equipo />} />
+        <Route path="/equipo/:equipo" element={<Cartas />} />
       </Routes>
     </Router>
   );
