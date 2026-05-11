@@ -23,7 +23,7 @@ function App() {
     return (
       <div className="splash">
         <h1>Yu-Gi-Oh App</h1>
-        <p>Cargando...</p>
+        <p>Cargandoo...</p>
       </div>
     );
   }
