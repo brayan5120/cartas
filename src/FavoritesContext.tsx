@@ -15,7 +15,7 @@ export const FavoritesContext = createContext<FavoritesContextType>({
 export const FavoritesProvider = ({ children }: { children: React.ReactNode }) => {
   const [favorites, setFavorites] = useState<string[]>([]);
 
-  // cargar favoritos
+  // cargar favoritoss
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("favorites") || "[]");
     setFavorites(stored);
